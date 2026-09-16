@@ -1,0 +1,21 @@
+[project]
+name = "rootIQ"
+version = "0.1.0"
+description = "OS&D - AI-based Root Cause Categorization and Prevention Engine"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.133.1",
+    "httpx>=0.28.1",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.3",
+    "psycopg2-binary>=2.9.11",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.1",
+    "python-multipart>=0.0.22",
+    "sqlalchemy>=2.0.41",
+    "uvicorn[standard]>=0.41.0",
+]
+
+[project.scripts]
+dev = "uvicorn app.main:app --reload --host 0.0.0.0 --port 3000"
